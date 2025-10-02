@@ -1,0 +1,106 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Default to dark theme values as StarrySpot is a dark themed app */
+    --background: 210 100% 12%; /* Dark Blue */
+    --foreground: 0 0% 83%; /* Light Grey */
+
+    --card: 210 100% 15%; /* Slightly Lighter Dark Blue */
+    --card-foreground: 0 0% 83%; /* Light Grey */
+
+    --popover: 210 100% 15%; /* Slightly Lighter Dark Blue */
+    --popover-foreground: 0 0% 83%; /* Light Grey */
+
+    --primary: 51 100% 50%; /* Yellow Accent */
+    --primary-foreground: 210 100% 12%; /* Dark Blue (for text on yellow) */
+
+    --secondary: 210 100% 20%; /* Medium Dark Blue */
+    --secondary-foreground: 0 0% 83%; /* Light Grey */
+
+    --muted: 210 100% 18%; /* Muted Dark Blue */
+    --muted-foreground: 0 0% 65%; /* Medium Grey */
+
+    --accent: 51 100% 50%; /* Yellow Accent */
+    --accent-foreground: 210 100% 12%; /* Dark Blue (for text on yellow) */
+
+    --destructive: 0 72% 51%; /* Adjusted Red for dark theme */
+    --destructive-foreground: 0 0% 98%; /* Light Grey */
+
+    --border: 210 100% 25%; /* Lighter Blue for borders */
+    --input: 210 100% 18%; /* Muted Dark Blue for input backgrounds */
+    --ring: 51 100% 50%; /* Yellow Accent for focus rings */
+
+    --radius: 0.5rem;
+
+    --chart-1: 51 100% 60%;
+    --chart-2: 200 80% 60%;
+    --chart-3: 260 80% 70%;
+    --chart-4: 0 0% 70%;
+    --chart-5: 30 100% 55%;
+    
+    /* Sidebar specific, adjusted for dark theme */
+    --sidebar-background: 210 100% 10%;
+    --sidebar-foreground: 0 0% 83%;
+    --sidebar-primary: 51 100% 50%;
+    --sidebar-primary-foreground: 210 100% 12%;
+    --sidebar-accent: 210 100% 18%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 210 100% 20%;
+    --sidebar-ring: 51 100% 50%;
+  }
+
+  .dark {
+    /* Ensure .dark class explicitly uses the same dark theme values */
+    --background: 210 100% 12%;
+    --foreground: 0 0% 83%;
+    --card: 210 100% 15%;
+    --card-foreground: 0 0% 83%;
+    --popover: 210 100% 15%;
+    --popover-foreground: 0 0% 83%;
+    --primary: 51 100% 50%;
+    --primary-foreground: 210 100% 12%;
+    --secondary: 210 100% 20%;
+    --secondary-foreground: 0 0% 83%;
+    --muted: 210 100% 18%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 51 100% 50%;
+    --accent-foreground: 210 100% 12%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 100% 25%;
+    --input: 210 100% 18%;
+    --ring: 51 100% 50%;
+    
+    --chart-1: 51 100% 60%;
+    --chart-2: 200 80% 60%;
+    --chart-3: 260 80% 70%;
+    --chart-4: 0 0% 70%;
+    --chart-5: 30 100% 55%;
+
+    --sidebar-background: 210 100% 10%;
+    --sidebar-foreground: 0 0% 83%;
+    --sidebar-primary: 51 100% 50%;
+    --sidebar-primary-foreground: 210 100% 12%;
+    --sidebar-accent: 210 100% 18%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 210 100% 20%;
+    --sidebar-ring: 51 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
